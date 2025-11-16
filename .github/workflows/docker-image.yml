@@ -29,7 +29,7 @@ jobs:
           context: ./OnlineArt
           file: ./OnlineArt/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/lab10backend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/lab-backend:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -37,4 +37,4 @@ jobs:
           context: ./onlineartgallery
           file: ./onlineartgallery/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/lab10frontend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/lab-frontend:latest
